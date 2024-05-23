@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 789777718845295434}
   - component: {fileID: 789777718845295433}
   m_Layer: 10
-  m_Name: Player4
+  m_Name: Player7
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 259386920dad75749be4d51280f1b14d, type: 2}
+  - {fileID: 2100000, guid: 6e316afdaafd11a49a3070f5820744f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 2
   speed: 7
-  playerNumber: 4
+  playerNumber: 7
   rb: {fileID: 0}
   floor:
     serializedVersion: 2

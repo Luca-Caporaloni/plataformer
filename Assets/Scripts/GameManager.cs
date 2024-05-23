@@ -21,7 +21,9 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         winCondition = false;
         SetConstraits();
+        
     }
+
 
     void Update()
     {

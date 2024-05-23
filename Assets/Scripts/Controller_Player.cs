@@ -112,7 +112,7 @@ public class Controller_Player : MonoBehaviour
         return Physics.Raycast(landingRay, out leftHit, transform.localScale.x/1.8f);
     }
 
-    private void Movement()
+    public void Movement()
     {
         if (Input.GetKey(KeyCode.A) && canMoveLeft)
         {

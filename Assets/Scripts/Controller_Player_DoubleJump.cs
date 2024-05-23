@@ -11,6 +11,15 @@ public class Controller_Player_DoubleJump : Controller_Player
         return Physics.BoxCast(transform.position, new Vector3(transform.localScale.x * 0.9f, transform.localScale.y / 3, transform.localScale.z * 0.9f), Vector3.down, out downHit, Quaternion.identity, downDistanceRay);
     }
 
+    public override void OnCollisionEnter(Collision collision)
+    {
+        base.OnCollisionEnter(collision);
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            jumpCounter = 1;
+        }
+    }
+
     public override void Jump()
     {
         if (IsOnSomething())
