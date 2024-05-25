@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void LoadNextLevel()
+    public void LoadNextLevel()
     {
         // Asegúrate de que las escenas estén añadidas en Build Settings en la misma orden
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
