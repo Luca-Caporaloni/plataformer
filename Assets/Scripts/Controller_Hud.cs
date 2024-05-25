@@ -17,7 +17,7 @@ public class Controller_Hud : MonoBehaviour
         if (GameManager.gameOver)
         {
             Time.timeScale = 0;
-            gameOverText.text = "Game Over" ;
+            gameOverText.text = "Game Over";
             gameOverText.gameObject.SetActive(true);
         }
         if (GameManager.winCondition)

@@ -10,13 +10,13 @@ public class Controller_Player_StaticAir : Controller_Player
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             isStatic = !isStatic;
             if (isStatic)
             {
                 rb.velocity = Vector3.zero; // Detiene el movimiento actual del personaje
-                rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation; // Congela la posición en el eje Y
+                rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation; // Congela la posición en todos los ejes
             }
             else
             {
@@ -24,10 +24,11 @@ public class Controller_Player_StaticAir : Controller_Player
             }
         }
 
-        // Movimiento horizontal solo si no está estático en el aire
+        // Movimiento y salto solo si no está estático en el aire
         if (!isStatic)
         {
             Movement(); //Pasé el void a public para poder usarlo en este script
+            Jump(); // Permitir el salto cuando no esté estático
         }
     }
 }
