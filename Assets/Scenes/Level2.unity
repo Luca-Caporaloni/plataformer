@@ -2368,12 +2368,12 @@ PrefabInstance:
     - target: {fileID: 789777718845295432, guid: b05f294c7444bc744a0570e30c918f83,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: -3.537508
+      value: -2.4973745
       objectReference: {fileID: 0}
     - target: {fileID: 789777718845295432, guid: b05f294c7444bc744a0570e30c918f83,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.84160995
+      value: 0.67338896
       objectReference: {fileID: 0}
     - target: {fileID: 789777718845295432, guid: b05f294c7444bc744a0570e30c918f83,
         type: 3}
@@ -2457,6 +2457,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 803236597}
+    - targetCorrespondingSourceObject: {fileID: 789777718845295439, guid: b05f294c7444bc744a0570e30c918f83,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 803236604}
   m_SourcePrefab: {fileID: 100100000, guid: b05f294c7444bc744a0570e30c918f83, type: 3}
 --- !u!1001 &594431699
 PrefabInstance:
@@ -3509,12 +3513,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803236596}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71cada01dbd84b04384c6574fab6702a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 15
+  jumpForce: 25
   speed: 7
   playerNumber: 7
   rb: {fileID: 803236599}
@@ -3530,7 +3534,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803236596}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4edce82d10e9bf40a1936572654861c, type: 3}
   m_Name: 
@@ -3556,6 +3560,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 548888198}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &803236604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803236596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f375e8185bb8f341a5cf45469229d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  jumpForce: 25
+  floorLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  playerNumber: 7
+  distanceRay: 5
+  downDistanceRay: 0.5
 --- !u!1 &854963713
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,7 +3710,7 @@ Transform:
   m_GameObject: {fileID: 869080584}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.239998, y: -24.52, z: 0.08}
+  m_LocalPosition: {x: 20.239998, y: -25.35, z: 0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
