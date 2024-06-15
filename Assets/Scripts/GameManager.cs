@@ -16,6 +16,17 @@ public class GameManager : MonoBehaviour
         Physics.gravity = new Vector3(0, -30, 0);
         gameOver = false;
         winCondition = false;
+
+        // Verifica que todos los jugadores estén correctamente asignados
+        foreach (var player in players)
+        {
+            if (player == null)
+            {
+                Debug.LogError("A player in the players list is not assigned.");
+                return;
+            }
+        }
+
         SetConstraits();
     }
 
@@ -35,7 +46,7 @@ public class GameManager : MonoBehaviour
                 i++;
             }
         }
-        if (i >= 7)
+        if (i >= 8)
         {
             winCondition = true;
             LoadNextLevel(); // Cargar el siguiente nivel
@@ -48,27 +59,25 @@ public class GameManager : MonoBehaviour
         {
             if (actualPlayer <= 0)
             {
-                actualPlayer = 7;
-                SetConstraits();
+                actualPlayer = 8;
             }
             else
             {
                 actualPlayer--;
-                SetConstraits();
             }
+            SetConstraits();
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (actualPlayer >= 7)
+            if (actualPlayer >= 8)
             {
                 actualPlayer = 0;
-                SetConstraits();
             }
             else
             {
                 actualPlayer++;
-                SetConstraits();
             }
+            SetConstraits();
         }
     }
 
@@ -76,6 +85,18 @@ public class GameManager : MonoBehaviour
     {
         foreach (Controller_Player p in players)
         {
+            if (p == null)
+            {
+                Debug.LogError("Player in players list is null.");
+                continue;
+            }
+
+            if (p.rb == null)
+            {
+                Debug.LogError("Rigidbody component is missing from player: " + p.gameObject.name);
+                continue;
+            }
+
             if (p == players[actualPlayer])
             {
                 p.rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
